@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		
+		<title>{{ page.title }}</title>
+    <link rel="icon" href="{{ '/assets/favicon.ico' }}" type="image/x-icon">
+		<meta name="author" content="Zenesis Ltd https://www.zenesis.com" />
+		<meta name="copyright" content="Copyright Zenesis Limited 2011-2012 https://www.zenesis.com" />
+		<meta name="designer" content="Zenesis Ltd https://www.zenesis.com" />
+	</head>
+	<body>
+		<div id="gw-app-container" style="width: 1024px">
+			<div style="width: 400px; margin-left: auto; margin-right: auto; font-size: 16pt; font-weight: bold; text-align: center">
+				<img src="/zx/theme/images/please_be_patient.png" border="0" />
+				<br/>
+				<img src="/zx/theme/images/animated-loading.gif" border="0" />
+			</div>
+		</div>
+		<script type="text/javascript">
+		(function(){
+			if (window.qx === undefined)
+			  window.qx = {};
+			qx.$$appRoot = "/zx/code/{{ applicationName }}/";
+		})();
+		</script>
+    <script type="text/javascript" src="/zx/code/{{ applicationName }}/index.js"></script>
+
+	</body>
+</html>

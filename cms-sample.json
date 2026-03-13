@@ -1,0 +1,31 @@
+{
+  "$schema": "../../source/resource/zx/cms/schema/cms-1-0-0.json",
+  "port": 3000,
+  "websiteName": "my.zxdemo.com",
+  "database": {
+    "type": "mongo",
+    "mongo": {
+      "uri": "mongodb://localhost",
+      "databaseName": "zxdemo"
+    },
+    "import": {
+      "when": "always",
+      "from": ["./website/template"]
+    },
+    "blobs": {
+      "directory": "website-data/blobs"
+    },
+    "statusFile": "database-status.json"
+  },
+  "statics": [
+    {
+      "url": "js",
+      "path": "website/js"
+    },
+    {
+      "url": "images",
+      "path": "website/images"
+    }
+  ],
+  "theme": "themes.ZxDemo"
+}

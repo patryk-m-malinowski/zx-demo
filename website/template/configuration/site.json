@@ -1,0 +1,27 @@
+{
+  "_classname": "zx.cms.website.Site",
+  "title": "Zen-CMS Demo",
+  "uuid": "f873073a-1a35-49af-9b77-dba769c4e905",
+  "rootNavigation": {
+    "_classname": "zx.cms.website.NavItem",
+    "title": "Root Nav Item",
+    "url": "",
+    "children": [
+      {
+        "_classname": "zx.cms.website.NavItem",
+        "title": "Home",
+        "url": "/"
+      }      
+    ]
+  },
+  "urlRules": [
+    {
+      "_classname": "zx.cms.website.UrlRule",
+      "url": "/index.html",
+      "isRegEx": false,
+      "cachability": "public",
+      "cacheRevalidation": "must-revalidate",
+      "maxAge": 120
+    }
+  ]
+}

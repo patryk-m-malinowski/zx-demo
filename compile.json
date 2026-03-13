@@ -1,0 +1,119 @@
+{
+  "$schema": "https://qooxdoo.org/schema/compile-1-0-0.json",
+  "environment": {
+    "zx.cli.ServeCommand.serverClassname": "zx.demo.server.WebServer"
+  },
+  "targets": [
+    {
+      "type": "source",
+      "outputPath": "compiled/source",
+      "environment": {
+        "zx.io.remote.NetworkEndpoint.server": false,
+        "qx.debug": true
+      },
+      "babelOptions": {
+        "targets": {
+          "chrome": "120",
+          "firefox": "120"
+        }
+      }      
+    },
+    {
+      "type": "build",
+      "outputPath": "compiled/build",
+      "environment": {
+        "zx.io.remote.NetworkEndpoint.server": false
+      },
+      "babelOptions": {
+        "targets": {
+          "chrome": "120",
+          "firefox": "120"
+        }
+      }
+    },
+    {
+      "application-types": ["node"],
+      "type": "source",
+      "babelOptions": {
+        "targets": {
+          "node": "20"
+        }
+      },
+      "environment": {
+        "qx.debug": true,
+        "zx.io.remote.NetworkEndpoint.server": true,
+        "qx.Promise.useNativePromise": true
+      },
+      "outputPath": "compiled/source-node",
+      "writeCompileInfo": true,
+      "addCreatedAt": true
+    },
+    {
+      "outputPath": "compiled/build-node",
+      "application-types": ["node"],
+      "type": "build",
+      "babelOptions": {
+        "targets": {
+          "node": "20"
+        }
+      },
+      "environment": {
+        "qx.debug": false,
+        "zx.io.remote.NetworkEndpoint.server": true
+      }
+    },
+    {
+      "type": "source",
+      "compiler": true,
+      "application-types": ["node"],
+      "outputPath": "compiled/source-compiler",
+      "environment": {
+        "qx.debug": true
+      },
+      "babelOptions": {
+        "targets": {
+          "node": "20"
+        }
+      }
+    },
+    {
+      "type": "build",
+      "compiler": true,
+      "application-types": ["node"],
+      "outputPath": "compiled/build-compiler",
+      "babelOptions": {
+        "targets": {
+          "node": "20"
+        }
+      }
+    }
+  ],
+  "defaultTarget": "source",
+  "locales": ["en"],
+
+  "applications": [    
+    {
+      "title": "Server App",
+      "name": "server-app",
+      "exclude": ["qx.bom.Selector"],
+      "type": "node",
+      "class": "zx.demo.server.ServerApp"      
+    },
+    {
+      "title": "Client App",
+      "name": "client-app",
+      "type": "browser",
+      "class": "zx.demo.client.ClientApp"
+    },
+    {
+      "type": "node",
+      "compiler": true,
+      "class": "qx.tool.compiler.cli.Application",
+      "environment": {
+        "qx.tool.compiler.Compiler.compilerClass": "zx.demo.compiler.CustomCompiler"
+      },
+      "name": "custom-compiler",
+      "include": ["zx.demo.compiler.CustomCompiler", "qx.tool.*"]
+    }
+  ]
+}
