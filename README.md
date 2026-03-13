@@ -1,6 +1,6 @@
 # Zen-CMS Demo App
 
-This project is a demo of [Zen-CMS](https://github.com/johnspackman/zen-cms), a full-stack app development library for Qooxdoo JavaScript.
+This project is a demo of [Zen-CMS](https://github.com/patryk-m-malinowski/zen-cms), a full-stack app development library for Qooxdoo JavaScript.
 It contains a web app used for editing data about stock items, which could be used by a retail business.
 The data is synced between the clients and the server in real-time,
 meaning that if a property of a data object is changed on the client,
@@ -32,7 +32,7 @@ All its files are located under `website/themes/themes.ZxDemo`.
 ## Setup
 
 Ensure you have the Qooxdoo following dependencies installed:
-- [Zen-CMS](https://github.com/johnspackman/zen-cms)
+- [Zen-CMS](https://github.com/patryk-m-malinowski/zen-cms)
 - [UploadMGR](https://github.com/johnspackman/UploadMgr)
 
 Additionally, you need to have a [Mongo](https://www.mongodb.com) database running.

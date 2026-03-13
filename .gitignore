@@ -6,3 +6,4 @@ cms.json
 local-compile.json
 database-status.json
 node_modules
+temp/

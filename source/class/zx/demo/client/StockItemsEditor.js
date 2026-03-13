@@ -3,7 +3,7 @@ qx.Class.define("zx.demo.client.StockItemsEditor", {
   construct() {
     super();
     this._setLayout(new qx.ui.layout.VBox(10));
-    qx.core.Init.getApplication().getApi(zx.demo.data.StockApi).then(api => {//!!register
+    qx.core.Init.getApplication().getApi(zx.demo.data.StockApi).then(api => {
       this.__api = api;
       this.getQxObject("ctlrResults");
       this._add(this.getQxObject("splitPane"));
