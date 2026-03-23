@@ -27,5 +27,13 @@
       "path": "website/images"
     }
   ],
-  "theme": "themes.ZxDemo"
+  "theme": "themes.ZxDemo",
+  "work": {
+    "inspect": "inspect",
+    "pool": {
+      "type": "local",
+      "minSize": 1,
+      "maxSize": 10
+    }
+  }
 }

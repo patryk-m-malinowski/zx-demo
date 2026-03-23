@@ -61,5 +61,5 @@ Compile using `qx compile --watch`
 Run `./serve.sh` in your project root.
 Then naviate to the URL in your browser (assuming port 3000, it will be `localhost:3000`).
 This will take you to a minified version of the Qooxdoo project webpage rendered by the CMS system.
-Click the start button under the "Server Objects Demo" section to go to the stock management app.
+There are two buttons: one for the Server Objects demo, and another one for the Scheduler Manager demo.
 

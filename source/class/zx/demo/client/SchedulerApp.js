@@ -16,12 +16,11 @@
  * ************************************************************************ */
 
 /**
- * This is the main application class of "zx.demo"
- * @asset(qx/icon/Tango/16/*)
+ * Application showcasing the ZX scheduler
+ * @use(zx.io.api.client.AbstractClientApi)
  */
-qx.Class.define("zx.demo.client.ClientApp", {
+qx.Class.define("zx.demo.client.SchedulerApp", {
   extend: qx.application.Standalone,
-  include: [zx.app.MClientApp],
 
   /*
   *****************************************************************************
@@ -39,7 +38,6 @@ qx.Class.define("zx.demo.client.ClientApp", {
     async main() {
       // Call super class
       super.main();
-      await this._zxInitialise();
 
       // Enable logging in debug variant
       if (qx.core.Environment.get("qx.debug")) {
@@ -58,8 +56,8 @@ qx.Class.define("zx.demo.client.ClientApp", {
       // Document is the application root
       var doc = this.getRoot();
 
-      // Add button to document at fixed coordinates
-      doc.add(new zx.demo.client.StockItemsEditor(), {
+      let transport = new zx.io.api.transport.http.HttpClientTransport("/zx-api");
+      doc.add(new zx.server.work.ui.SchedulerMgr(transport), {
         left: 0,
         right: 0,
         top: 0,

@@ -106,6 +106,19 @@
       "class": "zx.demo.client.ClientApp"
     },
     {
+      "title": "Scheduler App",
+      "name": "scheduler-app",
+      "type": "browser",
+      "class": "zx.demo.client.SchedulerApp"
+    },
+    {
+      "title": "Zx Puppeteer Server",
+      "description": "Server app that runs inside the zenesisuk/zx-puppeteer-server Docker container",
+      "class": "zx.cli.PuppeteerServerApp",
+      "type": "node",
+      "name": "puppeteer-server"
+    },
+    {
       "type": "node",
       "compiler": true,
       "class": "qx.tool.compiler.cli.Application",

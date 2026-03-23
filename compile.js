@@ -5,7 +5,6 @@ qx.Class.define("zx.demo.server.CompilerApi", {
 
   members: {
     async load() {
-      debugger;
       let compilerConfig = await qx.tool.utils.Json.loadJsonAsync("compile.json", "utf8");
 
       if (fs.existsSync("local-compile.json")) {
